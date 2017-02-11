@@ -27,6 +27,4 @@ jQuery(document).on 'turbolinks:load', ->
 		e.preventDefault()
 		return false	  
 
-		// Check the body's length, then broadcast to all users on the chatroom.  
-
     
