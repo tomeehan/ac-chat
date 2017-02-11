@@ -5,9 +5,8 @@
 
 
 <div class="chat">
-	<ul>
-		<%= render @chat_rooms %>
-	</ul>
+	<%= render @chat_rooms %>
+	<br>
 	<p class="lead"><%= link_to 'New Chat Room', new_chat_room_path, class: 'btn btn-primary' %></p>
 </div>
 
