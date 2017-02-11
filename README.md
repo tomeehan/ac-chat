@@ -4,6 +4,8 @@ This is a simple chat app using cable and devise. Users can add markdown to thei
 
 See it in production at: [ac-chat.herokuapp.com](http://ac-chat.herokuapp.com).
 
+![](http://tom-meehan.com/wp-content/uploads/2017/02/burger.gif)
+
 #### Setup
 
 1. `cd ac-chat`
