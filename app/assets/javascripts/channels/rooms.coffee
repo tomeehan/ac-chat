@@ -25,6 +25,8 @@ jQuery(document).on 'turbolinks:load', ->
 			App.global_chat.send_message textarea.val(), messages.data('chat-room-id')
 			textarea.val('')
 		e.preventDefault()
-		return false	    
+		return false	  
+
+		// Check the body's length, then broadcast to all users on the chatroom.  
 
     
