@@ -1,24 +1,23 @@
-# README
+# ActionCable Chat
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple chat app using cable and devise. Users can add markdown to their messages.
 
-Things you may want to cover:
+See it in production at: [ac-chat.herokuapp.com](http://ac-chat.herokuapp.com).
 
-* Ruby version
+#### Setup
 
-* System dependencies
+1. `cd ac-chat`
+2. `bundle install`
+3. `rake db:create`
+4. `rake db:migrate`
+5. `rails server`
 
-* Configuration
+Note: This app uses Redis [installation instructions](https://redis.io/topics/quickstart). If you deploy to Heroku, make sure you're using the [Redis Clous add-on](https://elements.heroku.com/addons/rediscloud).
 
-* Database creation
+This app is using: 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Ruby 2.3.0
+- Rails 5
+- Bootstrap 4 (aplha)
+- PostgreSQL
+- Redis
