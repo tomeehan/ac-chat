@@ -16,7 +16,8 @@ jQuery(document).on 'turbolinks:load', ->
 	    # Called when the subscription has been terminated by the server
 
 	  received: (data) ->
-	    messages.append data['message']
+  		messages.append data['message']
+  		messages_to_bottom()
 
 	  send_message: (message, chat_room_id) ->
 	    @perform 'send_message', message: message, chat_room_id: chat_room_id
