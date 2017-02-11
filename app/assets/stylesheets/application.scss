@@ -15,10 +15,40 @@
  */
 @import "bootstrap";
 
+body {
+	background: #F7F9FA;
+	color: #8091A5;
+	font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+}
+
 #messages {
   max-height: 450px;
+  padding: 10px;
   overflow-y: auto;
   .avatar {
     margin: 0.5rem;
   }
+}
+
+.chat-title {
+	margin-top: 25px;
+}
+
+.chat {
+	
+	padding: 10px;
+	box-shadow: 0px 0px 10px lighten(black, 75%);
+	background: white;
+}
+
+.login {
+	box-shadow: 0px 0px 10px lighten(black, 75%);
+	background: white;
+	padding: 25px;
+	margin-top: 25px;
+}
+
+.login input {
+	width: 100%;
+	margin-bottom: 25px;
 }
