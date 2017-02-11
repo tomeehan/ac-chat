@@ -21,6 +21,7 @@ class ChatRoomsController < ApplicationController
   def show
     @chat_room = ChatRoom.includes(:messages).find_by(id: params[:id])
     # includes method for eager loading
+    @message = Message.new
   end
 
   private
