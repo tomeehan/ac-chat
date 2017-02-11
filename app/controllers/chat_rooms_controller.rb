@@ -18,6 +18,11 @@ class ChatRoomsController < ApplicationController
     end
   end
 
+  def show
+    @chat_room = ChatRoom.includes(:messages).find_by(id: params[:id])
+    # includes method for eager loading
+  end
+
   private
 
   def chat_room_params
