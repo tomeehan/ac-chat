@@ -14,12 +14,12 @@ See it in production at: [ac-chat.herokuapp.com](http://ac-chat.herokuapp.com).
 4. `rake db:migrate`
 5. `rails server`
 
-Note: This app uses Redis [installation instructions](https://redis.io/topics/quickstart). If you deploy to Heroku, make sure you're using the [Redis Clous add-on](https://elements.heroku.com/addons/rediscloud).
+Note: This app uses Redis [(installation instructions)](https://redis.io/topics/quickstart). If you deploy to Heroku, make sure you're using the [Redis Clous add-on](https://elements.heroku.com/addons/rediscloud).
 
 This app is using: 
 
 - Ruby 2.3.0
 - Rails 5
-- Bootstrap 4 (aplha)
+- Bootstrap 4 (alpha)
 - PostgreSQL
 - Redis
