@@ -20,4 +20,29 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      user:
+        name: "Name" # Appears on forms
+        email: "Email" # Appears on forms
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        current_password: "Current password"
+  user:
+    session: # user logs in
+      sign_in: "Sign In" #
+      remember_me: "Remember Me"
+      log_in: "Log in"
+    edit:
+      my_account: "My Account" # page title
+      awaiting_confirmation: "Currently waiting confirmation for"
+      password:
+        characters_minimum: "characters minimum" # "ie password should be '6 character minimum'"
+        leave_blank: "leave blank if you don't want to change it" # sits inside brackets
+        confirm_changes: "we need your current password to confirm your changes" # sides inside brackets
+    delete:
+      unhappy: "Unhappy?"
+      cancel_my_account: "Cancel my account"
+      delete_confirmation: "Are you sure you want to delete your account?" # confirmation message when deleting account.
+
+
