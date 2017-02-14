@@ -1,18 +1,12 @@
-<div class="chat-title">
-	<h2>Chat rooms</h2>
+<div class="card">
+	<div class="card-header">
+		Chat rooms
+	</div>
+
+	<table class="table table-hover">
+		<%= render @chat_rooms %>
+	</table>
+	<div class="card-footer">
+		<%= link_to 'New Chat Room', new_chat_room_path, class: 'btn btn-primary' %>
+	</div>
 </div>
-
-
-
-<div class="chat">
-	<%= render @chat_rooms %>
-	<br>
-	<p class="lead"><%= link_to 'New Chat Room', new_chat_room_path, class: 'btn btn-primary' %></p>
-</div>
-
-<br>
-<% if user_signed_in? %>
-  <%= link_to "My Account", edit_user_registration_path(current_user) %> | <%= link_to('Logout', destroy_user_session_path, :method => :delete) %> 
-<% else %>
-  <%= link_to('Login', new_user_session_path)  %>  
-<% end %>
