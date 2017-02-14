@@ -67,3 +67,23 @@ body {
 .github a {
 	color: gray;
 }
+
+.popover-container .popover {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+
+.popover-container {
+	margin-top: 50px;
+}
+
+.send-message .input-group-addon {
+	padding: 0 !important;
+	border: none;
+}
+
+.send-message .input-group-addon .btn {
+	border-radius: 0 0.25rem 0.25rem 0;
+	width: 100%;
+} 

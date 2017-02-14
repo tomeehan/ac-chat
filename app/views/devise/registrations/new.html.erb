@@ -1,33 +1,80 @@
-<div class="login">
-<h2>Sign up</h2>
-  
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
-  
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
-    </div>
-  
-    <div class="field">
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
-  
-    <div class="field">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-      <br>
-    </div>
-  
-    <div class="actions">
+<div class="row">
+  <div class="col-md-6 offset-md-3 title">
     <br>
-      <%= f.submit "Sign up", class: "btn btn-primary" %>
+    <br>
+    <div class="display-4">
+      Action Cable Chat
     </div>
-  <% end %>
+    <h6>Simple chat room app built with Rails 5 and Action Cable</h6>
+    <br>
+    <br>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <div class="card form-signin">
+        <h3 class="card-header">Sign up</h3>
+        <div class="card-block">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
   
-  <%= render "devise/shared/links" %>
+            <div class="form-group">
+              <%= f.label :email %><br />
+                <div class="input-group">
+                  <%= f.email_field :email, autofocus: true, class: "form-control" %>
+                  <div class="input-group-addon">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                  </div>
+                </div>
+            </div>
+  
+            <div class="form-group">
+              <%= f.label :password %>
+              <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+                <div class="input-group">
+                  <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+                  <div class="input-group-addon">
+                    <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                  </div>
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <%= f.label :password_confirmation %><br />
+              <div class="input-group">
+                <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+                <div class="input-group-addon">
+                  <i class="fa fa-lock" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+  
+            <div class="actions">
+              <%= f.submit "Sign up", class: 'btn btn-primary btn-lg btn-block' %>
+            </div>
+          <% end %>
+      </div>
+    </div>
+    <div class="popover-container"> <!-- NEW -->
+      <div class="popover popover-bottom">
+        <div class="arrow"></div>
+        <h3 class="popover-title">A note to new users:</h3>
+        <div class="popover-content">
+          <p>Your username is derrived from your email address.</p>
+          <p>
+            For example: <br>
+            <strong>my.username</strong>@example.com
+          </p>
+          <hr>
+          <p>
+            This application isn't intended for real world use, and the database is routinely dropped. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="shared-links"><%= render "devise/shared/links" %></div>
+  </div>  
 </div>

@@ -1,24 +1,30 @@
-	<div class="chat-title">
-		<h2><%= @chat_room.title %></h2>
+<div class="card">
+	<div class="card-header">
+		<%= @chat_room.title %>
 	</div>
-<div class="chat">
 	
 	<div id="messages" data-chat-room-id="<%= @chat_room.id %>">
 	  <%= render @chat_room.messages %>
 	</div>
 	
-	<hr>
-	
-	<%= form_for @message, :html => {:autocomplete => "off"}, url: '#' do |f| %>
-	  <%= hidden_field_tag 'chat_room_id', @chat_room.id %>
-	  <div class="form-group">
-	    <%= f.label "Send message:" %>
-	    <%= f.text_field :body, class: 'form-control' %>
-	    <small class="text-muted">Between 2 to 1000 characters. Use markdown to format your messages, <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">click here for cheatsheet</a>.</small>
-	  </div>
-	
-	  <%= f.submit "Send", class: 'btn btn-primary btn-lg' %>
-	<% end %>
+	<div class="card-footer send-message">
+		<%= form_for @message, :html => {:autocomplete => "off"}, url: '#' do |f| %>
+			<%= hidden_field_tag 'chat_room_id', @chat_room.id %>
+			  <div class="form-group">
+			    <%= f.label "Send message:" %>
+			     <div class="input-group">
+              <%= f.text_field :body, class: 'form-control' %>
+              <div class="input-group-addon">
+								<%= f.submit "Send", class: 'btn btn-primary' %>
+              </div>
+            </div>
+        </div>
+			<% end %>
+		</div>
+	</div>
 </div>
+
 <br>
 <a href="/chat_rooms">Back</a>
+
+			    <small class="text-muted">Between 2 to 1000 characters. Use markdown to format your messages, <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">click here for cheatsheet</a>.</small>
