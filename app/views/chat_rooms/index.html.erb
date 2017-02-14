@@ -1,12 +1,16 @@
-<div class="card">
-	<div class="card-header">
-		Chat rooms
-	</div>
-
-	<table class="table table-hover">
-		<%= render @chat_rooms %>
-	</table>
-	<div class="card-footer">
-		<%= link_to 'New Chat Room', new_chat_room_path, class: 'btn btn-primary' %>
+<div class="row">
+	<div class="col-md-8 offset-md-2">
+		<div class="card">
+			<div class="card-header">
+				Chat rooms
+			</div>
+		
+			<table class="table table-hover">
+				<%= render @chat_rooms %>
+			</table>
+			<div class="card-footer">
+				<%= link_to 'New Chat Room', new_chat_room_path, class: 'btn btn-primary' %>
+			</div>
+		</div>
 	</div>
 </div>

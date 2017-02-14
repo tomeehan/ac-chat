@@ -1,3 +1,8 @@
 <tr>
-	<th><img src="/black-bubble-speech.png" alt="">   <%= link_to "#{chat_room.title}", chat_room_path(chat_room) %></th>
+	<th>
+   		<%= link_to chat_room_path(chat_room) do %>
+   			<i class="fa fa-comments-o" aria-hidden="true"></i>
+   			<%= chat_room.title %>
+   		<% end %>
+   	</th>
 </tr>
